@@ -1,7 +1,7 @@
 {
   "name": "GiftsAndPresents",
   "version": "1.0.0",
-  "description": "Our first big dream project",
+  "description": "Our big dream project",
   "author": "Shreerang Patwardhan &amp; Ashok Singamsetty",
   "private": true,
   "scripts": {
@@ -16,7 +16,6 @@
     "cross-env": "^5.2.0",
     "nuxt": "^2.0.0",
     "express": "^4.16.3",
-    "@nuxtjs/bulma": "^1.2.0",
     "@nuxtjs/axios": "^5.0.0"
   },
   "devDependencies": {
