@@ -1,58 +1,64 @@
 <template>
-  <div class="nugget-quantity-counter">
-    <div @click="decrement">
-      <svg
-        v-if="this.stepInterval === 1"
-        viewBox="0 0 24 24"
-        :width="iconDimensions"
-        :height="iconDimensions"
-      >
-        <g>
-          <path d="M64 0 M2 11 L2 13 L22 13 L22 11 Z" :fill="minusIconColor"></path>
-        </g>
-      </svg>
-      <div
-        v-else
-        class="nugget-quantity-step"
-        :style="{color: this.minusIconColor, fontSize: this.iconDimensions + 'px'}"
-      >-{{ this.stepInterval }}</div>
+  <div>
+    <div class="nugget-quantity-label">
+      <strong>Quantity: {{ countData }}</strong>
     </div>
-    <input
-      v-if="isCountEditable"
-      type="number"
-      :min="this.count"
-      :max="this.maxCount"
-      v-model.number="countData"
-      @blur="adjustCount"
-      @keypress="restrictChars($event)"
-    >
-    <div v-else>{{countData}}</div>
-    <div @click="increment">
-      <svg
-        v-if="this.stepInterval === 1"
-        viewBox="0 0 24 24"
-        :width="iconDimensions"
-        :height="iconDimensions"
+    <div class="nugget-quantity-counter">
+      <div @click="decrement">
+        <svg
+          v-if="stepInterval === 1"
+          :width="iconDimensions"
+          :height="iconDimensions"
+          viewBox="0 0 24 24"
+        >
+          <g>
+            <path
+              :fill="minusIconColor"
+              d="M64 0 M2 11 L2 13 L22 13 L22 11 Z" />
+          </g>
+        </svg>
+        <div
+          v-else
+          :style="{color: minusIconColor, fontSize: iconDimensions + 'px'}"
+          class="nugget-quantity-step"
+        >-{{ stepInterval }}</div>
+      </div>
+      <input
+        v-if="isCountEditable"
+        :min="count"
+        :max="maxCount"
+        v-model.number="countData"
+        type="number"
+        @blur="adjustCount"
+        @keypress="restrictChars($event)"
       >
-        <g>
-          <path
-            d="M 11 2 L 11 11 L 2 11 L 2 13 L 11 13 L 11 22 L 13 22 L 13 13 L 22 13 L 22 11 L 13 11 L 13 2 Z"
-            :fill="plusIconColor"
-          ></path>
-        </g>
-      </svg>
-      <div
-        v-else
-        class="nugget-quantity-step"
-        :style="{color: this.plusIconColor, fontSize: this.iconDimensions + 'px'}"
-      >+{{ this.stepInterval }}</div>
+      <div v-else>{{ countData }}</div>
+      <div @click="increment">
+        <svg
+          v-if="stepInterval === 1"
+          :width="iconDimensions"
+          :height="iconDimensions"
+          viewBox="0 0 24 24"
+        >
+          <g>
+            <path
+              :fill="plusIconColor"
+              d="M 11 2 L 11 11 L 2 11 L 2 13 L 11 13 L 11 22 L 13 22 L 13 13 L 22 13 L 22 11 L 13 11 L 13 2 Z" />
+          </g>
+        </svg>
+        <div
+          v-else
+          :style="{color: plusIconColor, fontSize: iconDimensions + 'px'}"
+          class="nugget-quantity-step"
+        >+{{ stepInterval }}</div>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'quantity-selector',
+  name: 'QuantitySelector',
   props: {
     count: {
       type: Number,
@@ -137,6 +143,9 @@ export default {
 <style>
 .nugget-quantity-counter {
   display: inline-flex;
+}
+.nugget-quantity-label {
+  margin-bottom: 10px;
 }
 .nugget-quantity-counter div:first-child {
   border: solid 1px #ccc;

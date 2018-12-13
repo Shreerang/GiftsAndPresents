@@ -18,5 +18,6 @@ export default {
   padding: 20px;
   background: #ccc;
   text-align: center;
+  width: 100%;
 }
 </style>

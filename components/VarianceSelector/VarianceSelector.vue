@@ -1,16 +1,16 @@
 <template>
   <div>
     <div class="nugget-variance-label">
-      <strong>{{ this.labelName }}: {{ this.selectedVariance}}</strong>
+      <strong>{{ labelName }}: {{ selectedVariance }}</strong>
     </div>
     <div>
       <div
-        v-for="(variance, index) of this.varianceData"
+        v-for="(variance, index) of varianceData"
         :key="index"
-        @click="selectVariance(variance, index)"
-        class="nugget-variance-shape"
         :class="varianceClassObject(variance, index)"
         :style="variance.image ? varianceStyleObject(variance, index) : ''"
+        class="nugget-variance-shape"
+        @click="selectVariance(variance, index)"
       >{{ variance.image ? '' : variance.value ? variance.value : variance.name }}</div>
     </div>
   </div>
@@ -18,7 +18,7 @@
 
 <script>
 export default {
-  name: 'variance-selector',
+  name: 'VarianceSelector',
   props: {
     labelName: {
       type: String,
@@ -29,7 +29,8 @@ export default {
       default: 'Please select one of the following'
     },
     varianceData: {
-      type: Array
+      type: Array,
+      default: () => []
     },
     shape: {
       type: String,

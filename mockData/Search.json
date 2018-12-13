@@ -6,8 +6,7 @@
         "desc": "Raw organic brown eggs in a basket",
         "image": "https://via.placeholder.com/150/CCCCCC/000000",
         "price": 28.1,
-        "rating": 4.2,
-        "link": "/product/12123"
+        "rating": 4.2
     },
     {
         "id": 12121,
@@ -16,8 +15,7 @@
         "desc": "Sweet fresh stawberry on the wooden table",
         "image": "https://via.placeholder.com/150/CCCCCC/000000",
         "price": 29.45,
-        "rating": 4.4,
-        "link": "/product/1311"
+        "rating": 4.4
     },
     {
         "id": 12122,
