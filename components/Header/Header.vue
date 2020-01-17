@@ -1,6 +1,10 @@
 <template>
   <header class="header">
-    <div class="logo">Logo</div>
+    <div class="logo">
+      <img
+        src="https://www.williams-sonoma.com/wsimgs/ab/images/i/201924/0002/images/mobile/mobile-header-title.svg"
+        alt="Logo">
+    </div>
   </header>
 </template>
 
@@ -12,7 +16,11 @@ export default {
 
 <style>
 .header {
-  background: #ccc;
-  padding: 20px;
+  padding: 10px 20px;
+  text-align: center;
+}
+
+.header img {
+  width: 40%;
 }
 </style>

@@ -1,8 +1,7 @@
 <template>
   <footer class="footer">
     <div class="content">
-      Created with
-      <span>❤️</span> by the big dream team!
+      Created for WSI Inc.
     </div>
   </footer>
 </template>
@@ -18,6 +17,5 @@ export default {
   padding: 20px;
   background: #ccc;
   text-align: center;
-  width: 100%;
 }
 </style>

@@ -54,7 +54,7 @@ export default {
     },
     fillColor: {
       type: String,
-      default: '#C00'
+      default: '#000'
     },
     baseColor: {
       type: String,

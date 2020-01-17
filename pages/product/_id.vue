@@ -3,12 +3,12 @@
     <div class="container">
       <div class="prod-must-show">
         <img
-          src="https://via.placeholder.com/400"
+          src="https://www.williams-sonoma.com/wsimgs/ab/images/dp/wcm/201922/0199/img8c.jpg"
           alt="Product">
         <button
           type="button"
           class="btn-atb">
-          Add to bag
+          Add to cart
         </button>
       </div>
       <div class="prod-details">
@@ -81,12 +81,13 @@ export default {
 .btn-atb {
   padding: 1rem;
   width: 100%;
-  background: #c00;
+  background: #000;
   color: #fff;
   font-size: 1em;
   max-width: 400px;
   margin-top: 10px;
   box-sizing: border-box;
+  border: none;
 }
 .prod-details {
   width: 70%;
@@ -137,7 +138,8 @@ export default {
     text-align: center;
   }
   .prod-details {
-    width: 100%;
+    width: none;
+    padding: 10px 0;
   }
 }
 

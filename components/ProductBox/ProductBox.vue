@@ -4,7 +4,8 @@
     class="link">
     <img
       :src="product.image"
-      alt="Placeholder image">
+      alt="Placeholder image"
+      class="prod-img">
     <p class="prod-title">{{ product.title }}</p>
     <p class="prod-price">${{ product.price }}</p>
     <StarRating
@@ -37,15 +38,18 @@ export default {
 </script>
 
 <style>
+.prod-img {
+  width: 100%;
+}
 .prod-title {
-  font-size: 1em;
+  font-size: 14px;
   padding: 5px 0;
   font-weight: bold;
 }
 .prod-price {
   font-weight: bold;
   padding: 5px 0;
-  color: #c00;
+  color: #000;
 }
 .prod-stars {
   width: 100%;
